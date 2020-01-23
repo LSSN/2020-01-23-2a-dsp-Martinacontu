@@ -1,0 +1,8 @@
+
+//il filtro lowpass o passa basso è un filtro che attenua pozioni di spetro sopra una frequenza data l'oscilloscopio fa vedere il segnale nel dominio del tempo. nelle "x" abbiamo il tempo, nelle "y" l'ampiezza.
+//invece lo spetroscopio analizza l'ampiezza nel dominio della frequenza.invece il band pass bpr
+import("stdfaust.lib");
+process=no.noise : fi.lowpass(2,6000) : fi.highpass(2,6000);
+//La frequenza di taglio del filtro viene chiamato catoff oppure fcat il numero indica il momento in cui il filtro inizia a tagliare il rumore bianco il punto di taglio espresso in hz indica il punto in cui l’ampiezza del segnale entrante viene attenuato di 3 deciBel dB il filtro del primo’ordine toglie 6 decibel ogni ottava della frequenza di taglio.
+//Il  rumore è tutto ciò che non ci informa o che non comprendiamo .è rumore se non ho gli strumenti per decodificarlo 
+// la sintesi è la riproduzione di uno o più suoni Algoritmo processo che ti permette di arrivare a un generatore di numeri casuali genera una successione velocissima di numeri essendo un oggetto AUDIO per noi  compresi tra +1 0 -1 .
